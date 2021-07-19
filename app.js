@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const db = mongoose.connection
 
-mongoose.connect('mongodb://localhost/expense-tracker')
+mongoose.connect('mongodb://localhost/expense-tracker', { useNewUrlParser: true, useUnifiedTopology: true })
 
 db.on('error', () => {
   console.log('mongodb error!')
