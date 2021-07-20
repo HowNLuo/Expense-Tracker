@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const Record = require('./models/record')
+const Category = require('./models/category')
 const bodyParser = require('body-parser')
 
 const mongoose = require('mongoose')
@@ -25,8 +26,14 @@ app.get('/', (req, res) => {
   Record.find()
     .lean()
     .sort({ date: 'desc' })
-    .then((records) => res.render('index', { records }))
-    .catch((error) => console.errer(error))
+    .then((records) => {
+      let totalAmount = 0
+      for (let i = 0; i < records.length; i++) {
+        totalAmount += parseInt(records[i].amount)
+      }
+      res.render('index', { records, totalAmount })
+    })
+    .catch((error) => console.error(error))
 })
 
 app.get('/record/:id/edit', (req, res) => {
@@ -37,7 +44,7 @@ app.get('/record/:id/edit', (req, res) => {
     .catch((error) => console.error(error))
 })
 
-app.post('/record/:id', (req, res) => {
+app.post('/record/:id/edit', (req, res) => {
   const id = req.params.id
   const name = req.body.name
   const date = req.body.date
