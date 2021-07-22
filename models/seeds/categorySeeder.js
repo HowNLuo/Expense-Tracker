@@ -1,8 +1,5 @@
 const Category = require('../category')
-const mongoose = require('mongoose')
-const db = mongoose.connection
-
-mongoose.connect('mongodb://localhost/expense-tracker', { useNewUrlParser: true, useUnifiedTopology: true })
+const db = require('../../config/mongoose')
 
 const categoryData = [
   {
