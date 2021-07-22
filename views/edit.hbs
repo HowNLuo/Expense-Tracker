@@ -1,36 +1,38 @@
 <div class="container">
-  <div class="row d-flex flex-column mt-3">
-    <form action="/record/{{record._id}}/edit" method="POST">
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">名稱</span>
+  <div class="row d-flex justify-content-center mt-3">
+    <div class="col-4">
+      <form action="/record/{{record._id}}?_method=PUT" method="POST">
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">名稱</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入名稱..." aria-label="Username"
+            aria-describedby="basic-addon1" name="name" value="{{record.name}}">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入名稱..." aria-label="Username"
-          aria-describedby="basic-addon1" name="name" value="{{record.name}}">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">日期</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">日期</span>
+          </div>
+          <input type="date" class="form-control" placeholder="請輸入日期..." aria-label="Username"
+            aria-describedby="basic-addon1" name="date" value="{{record.date}}">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入日期..." aria-label="Username"
-          aria-describedby="basic-addon1" name="date" value="{{record.date}}">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">類別</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">類別</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入類別..." aria-label="Username"
+            aria-describedby="basic-addon1" name="category" value="{{record.category}}">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入類別..." aria-label="Username"
-          aria-describedby="basic-addon1" name="category" value="{{record.category}}">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">金額</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">金額</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入金額..." aria-label="Username"
+            aria-describedby="basic-addon1" name="amount" value="{{record.amount}}">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入金額..." aria-label="Username"
-          aria-describedby="basic-addon1" name="amount" value="{{record.amount}}">
-      </div>
-      <button type="submit" class="btn btn-primary mt-3">送出</button>
-      <a href="/" class="btn btn-primary mt-3">返回</a>
-    </form>
+        <button type="submit" class="btn btn-primary mt-3">送出</button>
+        <a href="/" class="btn btn-primary mt-3">返回</a>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,36 +1,38 @@
 <div class="container">
-  <div class="row d-flex flex-column mt-3">
-    <form action="/record" method="POST">
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">名稱</span>
+  <div class="row d-flex justify-content-center mt-3">
+    <div class="col-4">
+      <form action="/record/new" method="POST">
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">名稱</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入名稱..." aria-label="Username"
+            aria-describedby="basic-addon1" name="name">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入名稱..." aria-label="Username"
-          aria-describedby="basic-addon1" name="name">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">日期</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1" type="date">日期</span>
+          </div>
+          <input type="date" class="form-control" placeholder="請輸入日期..." aria-label="Username"
+            aria-describedby="basic-addon1" name="date">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入日期..." aria-label="Username"
-          aria-describedby="basic-addon1" name="date">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">類別</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">類別</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入類別..." aria-label="Username"
+            aria-describedby="basic-addon1" name="category">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入類別..." aria-label="Username"
-          aria-describedby="basic-addon1" name="category">
-      </div>
-      <div class="input-group mt-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">金額</span>
+        <div class="input-group mt-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">金額</span>
+          </div>
+          <input type="text" class="form-control" placeholder="請輸入金額..." aria-label="Username"
+            aria-describedby="basic-addon1" name="amount">
         </div>
-        <input type="text" class="form-control" placeholder="請輸入金額..." aria-label="Username"
-          aria-describedby="basic-addon1" name="amount">
-      </div>
-      <button type="submit" class="btn btn-primary mt-3">新增支出</button>
-      <a href="/" class="btn btn-primary mt-3">返回</a>
-    </form>
+        <button type="submit" class="btn btn-primary mt-3">新增支出</button>
+        <a href="/" class="btn btn-primary mt-3">返回</a>
+      </form>
+    </div>
   </div>
 </div>
